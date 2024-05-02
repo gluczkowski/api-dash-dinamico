@@ -53,6 +53,8 @@ def upload_file():
                         dynamic_lists[key] = []
                     dynamic_lists[key].append(value)
 
+        os.remove(filepath)
+
         return jsonify({
             'message': 'Arquivo enviado com sucesso',
             'filename': filename,
